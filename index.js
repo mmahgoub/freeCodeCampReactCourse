@@ -6,25 +6,21 @@
  *  
  */
 
-function MainContent(){
+//Challenge 3
+function Nav(){
     return (
-        <div>
-            <h1>Here geos our title</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et minus amet officiis temporibus earum quod iusto, qui possimus? Expedita eaque temporibus in neque ipsa rerum ab vero nihil facere officia.</p>
-        </div>
+        <nav>
+            <h1>My Website</h1>
+            <ul>
+                <li>Pricing</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
     )
 }
-
-
 ReactDOM.render(
-<div>
-    <MainContent />
-</div>
-, document.getElementById('root'))
-
-// //Challenge 2
-// const root = document.getElementById('root');
-// const h1 = document.createElement('h1');
-// h1.className = "header"
-// h1.textContent = "Hi"
-// root.appendChild(h1);
+    <div>
+        <Nav />
+    </div>
+    , document.getElementById("root"))
