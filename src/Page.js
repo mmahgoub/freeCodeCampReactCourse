@@ -17,7 +17,7 @@ function Page() {
                 <li>Powers thousands if enterprise apps, including mobile apps</li>
             </ul>
         <footer>
-            &copy; 2022 ReactSites Development. All rights reserved.
+            <small>&copy; 2022 ReactSites Development. All rights reserved.</small>
         </footer>
     </div>
   )
