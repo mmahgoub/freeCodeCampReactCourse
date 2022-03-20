@@ -1,14 +1,9 @@
 import logo from './logo.svg';
 
-function Page({test}) {
-
-    const firstName = "Joe"
-    const lastName = "Schmoe"
-
-    console.log(test)
+function Page({salutation, firstName, lastName}) {
 
   return (
-    <h1>{test === "hi" && "Hullo"} {firstName} {lastName}!</h1>
+    <h1>{salutation === "Hi" && "Hullo"} {firstName} {lastName}!</h1>
   )
 }
 

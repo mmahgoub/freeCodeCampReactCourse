@@ -5,9 +5,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Page from './Page'
 
+const greeting = {
+  firstName: "Joe",
+  lastName: "Schmoe",
+  salutation: "Hi"
+}
 
 ReactDOM.render(
-  <Page test="hi"  />,
+  <Page {...greeting} />,
   // <React.StrictMode>
   //   <App />
   // </React.StrictMode>,
