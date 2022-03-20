@@ -7,7 +7,7 @@ import Page from './Page'
 
 
 ReactDOM.render(
-  <Page />,
+  <Page test="hi"  />,
   // <React.StrictMode>
   //   <App />
   // </React.StrictMode>,
