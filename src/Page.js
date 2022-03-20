@@ -1,14 +1,14 @@
 import logo from './logo.svg';
 
-function Page(props) {
+function Page({test}) {
 
     const firstName = "Joe"
     const lastName = "Schmoe"
 
-    console.log(props)
+    console.log(test)
 
   return (
-    <h1>{props.test} {firstName} {lastName}!</h1>
+    <h1>{test} {firstName} {lastName}!</h1>
   )
 }
 
