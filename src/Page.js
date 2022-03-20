@@ -8,7 +8,7 @@ function Page({test}) {
     console.log(test)
 
   return (
-    <h1>{test} {firstName} {lastName}!</h1>
+    <h1>{test === "hi" && "Hullo"} {firstName} {lastName}!</h1>
   )
 }
 
