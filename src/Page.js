@@ -3,16 +3,21 @@ import { useState } from 'react'
 
 function Page() {
 
-    const [topTextVal, setTopTextVal] = useState('')
-    const [bottomTextVal, setBottomTextVal] = useState('')
+    const [formData, setFormData] = useState({})
 
-    function handelClick(e) {
+    function handelChange(e) {
         //e.preventDefault();
+        setFormData(prevData => {
+            return {
+                ...prevData,
+                [e.target.name]: e.target.value
+            }
+        })
         
     }
     function onSubmit(e) {
         e.preventDefault();
-        console.log(topTextVal, bottomTextVal)
+        console.log(formData.topText, formData.bottomText)
     }
 
   return (
@@ -21,22 +26,22 @@ function Page() {
             <div>
                 <input 
                 name="topText" 
-                onChange={(e)=>setTopTextVal(e.target.value)} 
+                onChange={handelChange} 
                 type="text" 
                 placeholder='Top text' />
             </div>
             <div>
                 <input 
                 name="bottomText" 
-                onChange={(e)=>setBottomTextVal(e.target.value)} 
+                onChange={handelChange} 
                 type="text" 
                 placeholder='Bottom text' />
             </div>
             <br />
-            <button onClick={handelClick} type="submit">Get meme image 🖼️</button>
+            <button type="submit">Get meme image 🖼️</button>
         </form>
         <br />
-        <p>{topTextVal} {bottomTextVal}</p>
+        <p>{formData.topText} {formData.bottomText}</p>
     </div>
   )
 }
