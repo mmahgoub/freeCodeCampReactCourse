@@ -7,6 +7,7 @@ function Page() {
         topText: "",
         bottomText: "",
         isTrue: true,
+        whyThis: ""
     })
 
     function handelChange(e) {
@@ -45,7 +46,9 @@ function Page() {
                 placeholder='Bottom text' />
             </div>
             <div>
+                <label htmlFor='isTrue'>Are you human?</label>
                 <input 
+                id="isTrue" 
                 name="isTrue" 
                 onChange={handelChange} 
                 type="checkbox" 
@@ -53,10 +56,36 @@ function Page() {
                  />
             </div>
             <br />
+            <fieldset>
+                <legend>Why do want this?</legend>
+                <div>
+                    <label htmlFor='forFun'>For fun</label>
+                    <input 
+                    id="forFun" 
+                    name="whyThis" 
+                    onChange={handelChange} 
+                    type="radio" 
+                    value="For fun" 
+                    checked={formData.whyThis === "For fun"} 
+                    />
+                </div>
+                <div>
+                    <label htmlFor='forWork'>For work</label>
+                    <input 
+                    id="forWork" 
+                    name="whyThis" 
+                    onChange={handelChange} 
+                    type="radio" 
+                    value="For work"
+                    checked={formData.whyThis === "For work"} 
+                    />
+                </div>
+            </fieldset>
+            <br />
             <button type="submit">Get meme image 🖼️</button>
         </form>
         <br />
-        <p>{formData.topText} {formData.bottomText} | {formData.isTrue ? "True" : "False"}</p>
+        <p>{formData.topText} {formData.bottomText} {formData.whyThis} |  {formData.isTrue ? "Human" : "Alien"}</p>
     </div>
   )
 }
