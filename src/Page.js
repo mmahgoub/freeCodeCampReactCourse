@@ -3,7 +3,10 @@ import { useState } from 'react'
 
 function Page() {
 
-    const [formData, setFormData] = useState({})
+    const [formData, setFormData] = useState({
+        topText: "",
+        bottomText: "",
+    })
 
     function handelChange(e) {
         //e.preventDefault();
@@ -28,6 +31,7 @@ function Page() {
                 name="topText" 
                 onChange={handelChange} 
                 type="text" 
+                value={formData.topText} 
                 placeholder='Top text' />
             </div>
             <div>
@@ -35,6 +39,7 @@ function Page() {
                 name="bottomText" 
                 onChange={handelChange} 
                 type="text" 
+                value={formData.bottomText} 
                 placeholder='Bottom text' />
             </div>
             <br />
